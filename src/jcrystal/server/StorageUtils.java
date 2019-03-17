@@ -10,8 +10,9 @@ public class StorageUtils {
 	public static String getDEFAULT_BUCKET() {
 		if(DEFAULT_BUCKET == null) {
 			try {
-				Class.forName("jcrystal.server.StorageUtilsInitializer");
-			} catch (ClassNotFoundException e) {
+				Class<?> c = Class.forName("jcrystal.server.StorageUtilsInitializer");
+				c.getMethod("init").invoke(null);
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
