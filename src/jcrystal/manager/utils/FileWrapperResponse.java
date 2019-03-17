@@ -13,9 +13,8 @@ public class FileWrapperResponse<T> {
 	static IFileWrapperResponseUtils  UTILS;
 	static {
 		try {
-			UTILS = (IFileWrapperResponseUtils)Class.forName("jcrystal.manager.utils.FileWrapperResponseUtils.java").newInstance();
+			UTILS = (IFileWrapperResponseUtils)Class.forName("jcrystal.manager.utils.FileWrapperResponseUtils").newInstance();
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
