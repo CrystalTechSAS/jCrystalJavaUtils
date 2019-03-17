@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpPreconditionFailed412 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8239600016094910944L;
 	public HttpPreconditionFailed412(String content) {
 		super(412, content);
 	}

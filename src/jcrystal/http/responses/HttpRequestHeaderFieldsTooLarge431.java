@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpRequestHeaderFieldsTooLarge431 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3983943515608535769L;
 	public HttpRequestHeaderFieldsTooLarge431(String content) {
 		super(431, content);
 	}

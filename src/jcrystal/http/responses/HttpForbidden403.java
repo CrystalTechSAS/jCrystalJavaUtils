@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpForbidden403 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6456585593480416860L;
 	public HttpForbidden403(String content) {
 		super(403, content);
 	}

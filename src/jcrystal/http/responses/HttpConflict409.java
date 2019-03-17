@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpConflict409 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2876488692809139052L;
 	public HttpConflict409(String content) {
 		super(409, content);
 	}

@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpLoopDetected508 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1099180125392056953L;
 	public HttpLoopDetected508(String content) {
 		super(508, content);
 	}

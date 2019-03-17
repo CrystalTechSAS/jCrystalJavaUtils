@@ -5,7 +5,11 @@
  */
 package jcrystal.http.responses;
 
-public class HttpResponseException extends NullPointerException{
+public class HttpResponseException extends RuntimeException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5323696680606883363L;
 	private int code;
 	private String content; 
 	

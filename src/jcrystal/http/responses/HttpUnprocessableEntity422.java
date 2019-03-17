@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpUnprocessableEntity422 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7074946857316735885L;
 	public HttpUnprocessableEntity422(String content) {
 		super(422, content);
 	}

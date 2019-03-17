@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpUseProxy305 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8777082663895811837L;
 	public HttpUseProxy305(String content) {
 		super(305, content);
 	}

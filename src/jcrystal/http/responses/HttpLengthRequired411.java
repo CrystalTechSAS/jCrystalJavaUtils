@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpLengthRequired411 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8964878780552782789L;
 	public HttpLengthRequired411(String content) {
 		super(411, content);
 	}

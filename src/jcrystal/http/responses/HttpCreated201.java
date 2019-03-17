@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpCreated201 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5603232822462556659L;
 	public HttpCreated201(String content) {
 		super(201, content);
 	}

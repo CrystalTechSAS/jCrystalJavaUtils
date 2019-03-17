@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpExpectationFailed417 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5091856457675420992L;
 	public HttpExpectationFailed417(String content) {
 		super(417, content);
 	}

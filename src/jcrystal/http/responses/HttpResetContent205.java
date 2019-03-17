@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpResetContent205 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7831548205528062852L;
 	public HttpResetContent205(String content) {
 		super(205, content);
 	}

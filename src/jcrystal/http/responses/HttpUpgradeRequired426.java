@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpUpgradeRequired426 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -742850691522936884L;
 	public HttpUpgradeRequired426(String content) {
 		super(426, content);
 	}

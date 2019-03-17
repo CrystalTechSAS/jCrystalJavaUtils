@@ -6,7 +6,6 @@
 package jcrystal.datetime;
 
 import java.text.SimpleDateFormat;
-import java.util.TimeZone;
 
 public enum DateType {
 	DATE_TIME("yyyyMMddHHmm", "dd/MM/yyyy HH:mm"),

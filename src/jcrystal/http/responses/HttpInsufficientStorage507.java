@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpInsufficientStorage507 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3147378768858486913L;
 	public HttpInsufficientStorage507(String content) {
 		super(507, content);
 	}

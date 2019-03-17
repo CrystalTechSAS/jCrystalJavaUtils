@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpMultipleChoices300 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5078567277704474489L;
 	public HttpMultipleChoices300(String content) {
 		super(300, content);
 	}

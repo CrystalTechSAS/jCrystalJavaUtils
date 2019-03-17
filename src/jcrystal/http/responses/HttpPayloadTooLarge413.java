@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpPayloadTooLarge413 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6561239888662277975L;
 	public HttpPayloadTooLarge413(String content) {
 		super(413, content);
 	}

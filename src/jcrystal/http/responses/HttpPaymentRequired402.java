@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpPaymentRequired402 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3161398893583227933L;
 	public HttpPaymentRequired402(String content) {
 		super(402, content);
 	}

@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpHTTPVersionNotSupported505 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5526925946176331017L;
 	public HttpHTTPVersionNotSupported505(String content) {
 		super(505, content);
 	}

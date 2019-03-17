@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpConnectionClosedWithoutResponse444 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7462605681626968392L;
 	public HttpConnectionClosedWithoutResponse444(String content) {
 		super(444, content);
 	}

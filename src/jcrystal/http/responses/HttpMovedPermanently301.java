@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpMovedPermanently301 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6784934681421525798L;
 	public HttpMovedPermanently301(String content) {
 		super(301, content);
 	}

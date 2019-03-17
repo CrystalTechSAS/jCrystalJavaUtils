@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpBadGateway502 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5603121616949145031L;
 	public HttpBadGateway502(String content) {
 		super(502, content);
 	}

@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpInternalServerError500 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2771722089969712752L;
 	public HttpInternalServerError500(String content) {
 		super(500, content);
 	}

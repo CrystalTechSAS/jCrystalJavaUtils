@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpUnsupportedMediaType415 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5783736994202061253L;
 	public HttpUnsupportedMediaType415(String content) {
 		super(415, content);
 	}

@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpURITooLong414 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5365722415145242711L;
 	public HttpURITooLong414(String content) {
 		super(414, content);
 	}

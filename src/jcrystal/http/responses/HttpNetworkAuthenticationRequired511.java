@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpNetworkAuthenticationRequired511 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6607710340922674084L;
 	public HttpNetworkAuthenticationRequired511(String content) {
 		super(511, content);
 	}

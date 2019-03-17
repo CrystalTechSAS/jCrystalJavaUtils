@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpMultiStatus207 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5228239272947374267L;
 	public HttpMultiStatus207(String content) {
 		super(207, content);
 	}

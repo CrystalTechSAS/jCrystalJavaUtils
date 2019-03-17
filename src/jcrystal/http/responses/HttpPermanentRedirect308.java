@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpPermanentRedirect308 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8897895479883408252L;
 	public HttpPermanentRedirect308(String content) {
 		super(308, content);
 	}

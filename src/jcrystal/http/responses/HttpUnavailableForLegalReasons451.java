@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpUnavailableForLegalReasons451 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5151958760171520667L;
 	public HttpUnavailableForLegalReasons451(String content) {
 		super(451, content);
 	}

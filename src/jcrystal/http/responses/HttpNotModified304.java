@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpNotModified304 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8724096704994446812L;
 	public HttpNotModified304(String content) {
 		super(304, content);
 	}

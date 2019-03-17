@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpNotAcceptable406 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7037941355572937943L;
 	public HttpNotAcceptable406(String content) {
 		super(406, content);
 	}

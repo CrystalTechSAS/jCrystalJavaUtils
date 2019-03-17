@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpMethodNotAllowed405 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4126903927078324872L;
 	public HttpMethodNotAllowed405(String content) {
 		super(405, content);
 	}

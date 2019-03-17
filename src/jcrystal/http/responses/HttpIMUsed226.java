@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpIMUsed226 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6671293924024009394L;
 	public HttpIMUsed226(String content) {
 		super(226, content);
 	}

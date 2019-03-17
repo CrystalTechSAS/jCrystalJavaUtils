@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpPartialContent206 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6474120714344737490L;
 	public HttpPartialContent206(String content) {
 		super(206, content);
 	}

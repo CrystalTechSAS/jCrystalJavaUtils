@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpLocked423 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2839824049055760221L;
 	public HttpLocked423(String content) {
 		super(423, content);
 	}

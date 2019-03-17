@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpBadRequest400 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 424471969458149074L;
 	public HttpBadRequest400(String content) {
 		super(400, content);
 	}

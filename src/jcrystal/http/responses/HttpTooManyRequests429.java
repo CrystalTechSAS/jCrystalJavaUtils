@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpTooManyRequests429 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 707079365447859976L;
 	public HttpTooManyRequests429(String content) {
 		super(429, content);
 	}

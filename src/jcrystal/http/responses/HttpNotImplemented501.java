@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpNotImplemented501 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1171666610571250525L;
 	public HttpNotImplemented501(String content) {
 		super(501, content);
 	}

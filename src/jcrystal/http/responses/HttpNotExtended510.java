@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpNotExtended510 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3977789760112005745L;
 	public HttpNotExtended510(String content) {
 		super(510, content);
 	}

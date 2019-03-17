@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpTemporaryRedirect307 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1555526564846897649L;
 	public HttpTemporaryRedirect307(String content) {
 		super(307, content);
 	}

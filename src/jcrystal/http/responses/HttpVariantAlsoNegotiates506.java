@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpVariantAlsoNegotiates506 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6449249728847982547L;
 	public HttpVariantAlsoNegotiates506(String content) {
 		super(506, content);
 	}

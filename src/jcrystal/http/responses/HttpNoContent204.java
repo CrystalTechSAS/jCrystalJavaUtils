@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpNoContent204 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7614670014843404844L;
 	public HttpNoContent204(String content) {
 		super(204, content);
 	}

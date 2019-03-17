@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpNonAuthoritativeInformation203 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3461877856689864835L;
 	public HttpNonAuthoritativeInformation203(String content) {
 		super(203, content);
 	}

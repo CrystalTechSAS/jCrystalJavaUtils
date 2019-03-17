@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpNotFound404 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 112312312312L;
 	public HttpNotFound404(String content) {
 		super(404, content);
 	}

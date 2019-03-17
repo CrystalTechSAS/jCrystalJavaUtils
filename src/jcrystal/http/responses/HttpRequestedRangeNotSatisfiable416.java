@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpRequestedRangeNotSatisfiable416 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2610531005359303228L;
 	public HttpRequestedRangeNotSatisfiable416(String content) {
 		super(416, content);
 	}

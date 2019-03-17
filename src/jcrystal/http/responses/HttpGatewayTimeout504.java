@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpGatewayTimeout504 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7956736922443321133L;
 	public HttpGatewayTimeout504(String content) {
 		super(504, content);
 	}

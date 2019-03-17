@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpAlreadyReported208 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2310452000442747746L;
 	public HttpAlreadyReported208(String content) {
 		super(208, content);
 	}

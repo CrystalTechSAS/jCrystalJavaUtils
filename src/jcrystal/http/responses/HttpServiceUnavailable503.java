@@ -5,6 +5,10 @@
  */
 package jcrystal.http.responses;
 public class HttpServiceUnavailable503 extends HttpResponseException{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 115127883495649041L;
 	public HttpServiceUnavailable503(String content) {
 		super(503, content);
 	}
