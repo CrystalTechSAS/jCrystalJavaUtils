@@ -46,4 +46,10 @@ public class FileWrapperResponse<T> {
 	public void append(Writer output, boolean putFirst) throws IOException{
 		UTILS.append(this, output, putFirst);
 	}
+	public String getBucketName() {
+		return bucketName;
+	}
+	public String getFileName() {
+		return fileName;
+	}
 }
