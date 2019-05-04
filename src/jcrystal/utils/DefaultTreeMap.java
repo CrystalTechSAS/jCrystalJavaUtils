@@ -6,16 +6,20 @@
 package jcrystal.utils;
 
 import java.util.TreeMap;
+import java.util.function.Function;
 
-public abstract class DefaultTreeMap<K, V> extends TreeMap<K, V>{
+public class DefaultTreeMap<K, V> extends TreeMap<K, V>{
 	private static final long serialVersionUID = -5333416110389237478L;
+	private Function<K, V> defCreator;
+	public DefaultTreeMap(Function<K, V> defCreator) {
+		this.defCreator = defCreator;
+	}
 	@SuppressWarnings("unchecked")
 	@Override
 	public V get(Object key) {
 		V ret = super.get(key);
 		if(ret==null)
-			put((K)key, ret = def((K)key));
+			put((K)key, ret = defCreator.apply((K)key));
 		return ret;
 	}
-	public abstract V def(K key);
 }
