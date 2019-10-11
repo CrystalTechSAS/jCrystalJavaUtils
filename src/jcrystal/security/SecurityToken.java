@@ -3,12 +3,14 @@
  * Proprietary and confidential
  * Written by Germán Augusto Sotelo Arévalo <gasotelo@crystaltech.co.com>, December 2018
  */
-package jcrystal.reflection;
+package jcrystal.security;
 
 /**
 * Created by g on 9/6/16.
 */
 public interface SecurityToken {
 	String token();
-	long rol();
+	default long rol() {
+		return 0;
+	}
 }
