@@ -86,6 +86,22 @@ public class JSONUtils {
 		ret += ","+it.next().toString();
 		return ret+"]";
 	}
+	public static String jsonQuoteDouble(List<Double> puntos){
+		Iterator<Double> it = puntos.iterator();
+		String ret = "[";
+		if(it.hasNext())ret += it.next();
+			while(it.hasNext())
+				ret += ","+Double.toString(it.next());
+		return ret+"]";
+	}
+	public static String jsonQuoteBoolean(List<Boolean> puntos){
+		Iterator<Boolean> it = puntos.iterator();
+		String ret = "[";
+		if(it.hasNext())ret += it.next();
+			while(it.hasNext())
+				ret += ","+Boolean.toString(it.next());
+		return ret+"]";
+	}
 	public static String jsonQuoteInteger(List<Integer> puntos){
 		Iterator<Integer> it = puntos.iterator();
 		String ret = "[";
