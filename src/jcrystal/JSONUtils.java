@@ -131,6 +131,26 @@ public class JSONUtils {
 		}
 		_pw.print("]");
 	}
+	public static void jsonQuoteBoolean(PrintWriter _pw, List<Boolean> puntos){
+		Iterator<Boolean> it = puntos.iterator();
+		_pw.print("[");
+		if(it.hasNext())_pw.print(it.next());
+			while(it.hasNext()) {
+			_pw.print(",");
+			_pw.print(it.next());
+		}
+		_pw.print("]");
+	}
+	public static void jsonQuoteDouble(PrintWriter _pw, List<Double> puntos){
+		Iterator<Double> it = puntos.iterator();
+		_pw.print("[");
+		if(it.hasNext())_pw.print(it.next());
+			while(it.hasNext()) {
+			_pw.print(",");
+			_pw.print(it.next());
+		}
+		_pw.print("]");
+	}
 	public static void jsonQuoteInteger(PrintWriter _pw, List<Integer> puntos){
 		Iterator<Integer> it = puntos.iterator();
 		_pw.print("[");
