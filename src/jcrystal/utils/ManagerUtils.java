@@ -57,4 +57,14 @@ public class ManagerUtils {
 	public static boolean equal(Long v1, Long v2) {
 		return (v1 == null && v2 == null) || (v1 != null && v2 != null && v1.longValue() == v2.longValue());
 	}
+	
+	public static void assertNotEmpty(List<?> val, String msg){
+		if(val==null || val.isEmpty())
+			throw new InternalException(21, msg);
+	}
+	public static void assertEmpty(List<?> val, String msg){
+		if(val != null && !val.isEmpty())
+			throw new InternalException(21, msg);
+	}
+	
 }
