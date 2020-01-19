@@ -161,23 +161,45 @@ public class JSONUtils {
 		}
 		_pw.print("]");
 	}
-	public static void jsonQuoteStringDouble(PrintWriter _pw, Map<String, Double> puntos){
-		Iterator<Map.Entry<String, Double>> it = puntos.entrySet().iterator();
-		Map.Entry<String, Double> e;
-		_pw.print("{");
-		if(it.hasNext()){
-			e = it.next();
-			_pw.print(jsonQuote(e.getKey()));
-			_pw.print(":");
-			_pw.print(e.getValue());
+	
+	public static class Map{
+		public static void jsonQuoteStringDouble(PrintWriter _pw, java.util.Map<String, Double> puntos){
+			Iterator<java.util.Map.Entry<String, Double>> it = puntos.entrySet().iterator();
+			java.util.Map.Entry<String, Double> e;
+			_pw.print("{");
+			if(it.hasNext()){
+				e = it.next();
+				_pw.print(jsonQuote(e.getKey()));
+				_pw.print(":");
+				_pw.print(e.getValue());
+			}
+			while(it.hasNext()) {
+				e = it.next();
+				_pw.print(",");
+				_pw.print(jsonQuote(e.getKey()));
+				_pw.print(":");
+				_pw.print(e.getValue());
+			}
+			_pw.print("}");
 		}
-		while(it.hasNext()) {
-			e = it.next();
-			_pw.print(",");
-			_pw.print(jsonQuote(e.getKey()));
-			_pw.print(":");
-			_pw.print(e.getValue());
+		public static void jsonQuoteStringString(PrintWriter _pw, java.util.Map<String, String> puntos){
+			Iterator<java.util.Map.Entry<String, String>> it = puntos.entrySet().iterator();
+			java.util.Map.Entry<String, String> e;
+			_pw.print("{");
+			if(it.hasNext()){
+				e = it.next();
+				_pw.print(jsonQuote(e.getKey()));
+				_pw.print(":");
+				_pw.print(e.getValue());
+			}
+			while(it.hasNext()) {
+				e = it.next();
+				_pw.print(",");
+				_pw.print(jsonQuote(e.getKey()));
+				_pw.print(":");
+				_pw.print(e.getValue());
+			}
+			_pw.print("}");
 		}
-		_pw.print("}");
 	}
 }
