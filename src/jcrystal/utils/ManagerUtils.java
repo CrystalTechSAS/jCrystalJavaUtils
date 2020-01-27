@@ -24,6 +24,9 @@ public class ManagerUtils {
 	public static void assertNotNull(Object val, String msg){
 		if(val == null)throw new InternalException(21, msg);
 	}
+	public static void assertNull(Object val, String msg){
+		if(val != null)throw new InternalException(21, msg);
+	}
 	public static void assertEq(Object obj1, Object obj2, String msg){
 		if(!Objects.equals(obj1, obj2))throw new InternalException(22, msg);
 	}
