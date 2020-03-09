@@ -15,6 +15,9 @@ public class CrystalMonth extends AbsCrystalDate<CrystalMonth>{
 	@Override public String format(){
 		return DateType.MONTH.FORMAT.format(date);
 	}
+	public static String format(java.util.Date date){
+		return DateType.MONTH.FORMAT.format(date);
+	}
 	@Override public CrystalMonth next(){
 		return add(java.util.GregorianCalendar.MONTH, 1);
 	}

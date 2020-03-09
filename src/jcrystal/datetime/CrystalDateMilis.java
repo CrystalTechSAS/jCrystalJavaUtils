@@ -15,6 +15,9 @@ public class CrystalDateMilis extends AbsCrystalDate<CrystalDateMilis>{
 	@Override public String format(){
 		return DateType.DATE_MILIS.FORMAT.format(date);
 	}
+	public static String format(java.util.Date date){
+		return DateType.DATE_MILIS.FORMAT.format(date);
+	}
 	@Override public CrystalDateMilis next(){
 		return add(1l);
 	}

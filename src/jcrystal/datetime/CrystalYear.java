@@ -15,6 +15,9 @@ public class CrystalYear extends AbsCrystalDate<CrystalYear>{
 	@Override public String format(){
 		return DateType.YEAR.FORMAT.format(date);
 	}
+	public static String format(java.util.Date date){
+		return DateType.YEAR.FORMAT.format(date);
+	}
 	@Override public CrystalYear next(){
 		return add(java.util.GregorianCalendar.YEAR, 1);
 	}
