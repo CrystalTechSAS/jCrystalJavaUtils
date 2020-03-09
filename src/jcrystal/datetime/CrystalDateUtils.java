@@ -1,7 +1,7 @@
 /* Copyright (C) Germán Augusto Sotelo Arévalo - All Rights Reserved
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
- * Written by Germán Augusto Sotelo Arévalo <gasotelo@crystaltech.co.com>, December 2018
+ * Written by Germán Augusto Sotelo Arévalo <gasotelo@crystaltech.co>, December 2018
  */
 package jcrystal.datetime;
 
@@ -18,7 +18,7 @@ public class CrystalDateUtils {
 		return new GregorianCalendar();
 	}
 	public static GregorianCalendar today(){
-		GregorianCalendar gc = new GregorianCalendar();
+		GregorianCalendar gc = new GregorianCalendar(UTC);
 		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
 		gc.set(GregorianCalendar.MINUTE, 0);
 		gc.set(GregorianCalendar.MILLISECOND, 0);
@@ -31,15 +31,15 @@ public class CrystalDateUtils {
 		gc.set(GregorianCalendar.MILLISECOND, 0);
 		return gc;
 	}
-	public static GregorianCalendar toMonth(){
-		GregorianCalendar gc = new GregorianCalendar();
+	public static GregorianCalendar currentMonth(){
+		GregorianCalendar gc = new GregorianCalendar(UTC);
 		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
 		gc.set(GregorianCalendar.MINUTE, 0);
 		gc.set(GregorianCalendar.MILLISECOND, 0);
 		gc.set(GregorianCalendar.DAY_OF_MONTH, 1);
 		return gc;
 	}
-	public static GregorianCalendar toMonth(TimeZone time){
+	public static GregorianCalendar currentMonth(TimeZone time){
 		GregorianCalendar gc = new GregorianCalendar(time);
 		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
 		gc.set(GregorianCalendar.MINUTE, 0);
@@ -47,7 +47,16 @@ public class CrystalDateUtils {
 		gc.set(GregorianCalendar.DAY_OF_MONTH, 1);
 		return gc;
 	}
-	public static GregorianCalendar toYear(TimeZone time){
+	public static GregorianCalendar currentYear(){
+		GregorianCalendar gc = new GregorianCalendar(UTC);
+		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
+		gc.set(GregorianCalendar.MINUTE, 0);
+		gc.set(GregorianCalendar.MILLISECOND, 0);
+		gc.set(GregorianCalendar.DAY_OF_YEAR, 1);
+		gc.set(GregorianCalendar.MONTH, GregorianCalendar.JANUARY);
+		return gc;
+	}
+	public static GregorianCalendar currentYear(TimeZone time){
 		GregorianCalendar gc = new GregorianCalendar(time);
 		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
 		gc.set(GregorianCalendar.MINUTE, 0);
@@ -56,8 +65,8 @@ public class CrystalDateUtils {
 		gc.set(GregorianCalendar.MONTH, GregorianCalendar.JANUARY);
 		return gc;
 	}
-	public static GregorianCalendar toWeek(){
-		GregorianCalendar gc = new GregorianCalendar();
+	public static GregorianCalendar currentWeek(){
+		GregorianCalendar gc = new GregorianCalendar(UTC);
 		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
 		gc.set(GregorianCalendar.MINUTE, 0);
 		gc.set(GregorianCalendar.MILLISECOND, 0);

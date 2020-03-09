@@ -1,70 +1,39 @@
-/* Copyright (C) Germán Augusto Sotelo Arévalo - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * Proprietary and confidential
- * Written by Germán Augusto Sotelo Arévalo <gasotelo@crystaltech.co.com>, December 2018
- */
 package jcrystal.datetime;
-import java.util.*;
-import java.text.ParseException;
-public class CrystalDateSeconds{
-	public static final java.text.SimpleDateFormat SDF = new java.text.SimpleDateFormat("yyyyMMddHHmmss");
-	static {SDF.setTimeZone(TimeZone.getTimeZone("UTC"));}
-	private final java.util.Date date;
-	public CrystalDateSeconds(String text)throws ParseException{
-		date = SDF.parse(text);
+public class CrystalDateSeconds extends AbsCrystalDate<CrystalDateSeconds>{
+	public CrystalDateSeconds(String text)throws java.text.ParseException{
+		super(DateType.DATE_SECONDS.FORMAT.parse(text));
 	}
 	public CrystalDateSeconds(long time){
-		date = new java.util.Date(time);
+		super(new java.util.Date(time));
+	}
+	@Override public CrystalDateSeconds create(long time){
+		return new CrystalDateSeconds(time);
 	}
 	public CrystalDateSeconds(){
-		date = new Date();
+		super(new java.util.Date());
 	}
-	public String format(){
-		return SDF.format(date);
+	@Override public String format(){
+		return DateType.DATE_SECONDS.FORMAT.format(date);
 	}
-	public java.util.Date toDate(){
-		return date;
+	@Override public CrystalDateSeconds next(){
+		return add(java.util.GregorianCalendar.SECOND, 1);
 	}
-	public static java.util.Date toDate(CrystalDateSeconds cDate){
-		return cDate == null ? null : cDate.date;
+	@Override public CrystalDateSeconds prev(){
+		return add(java.util.GregorianCalendar.SECOND, -1);
 	}
-	public static final java.text.SimpleDateFormat SDF_SIMPLE_TIME = new java.text.SimpleDateFormat("HH:mm");
-	public static final java.text.SimpleDateFormat SDF_SIMPLE_DATE = new java.text.SimpleDateFormat("dd/MM/yyyy");
-	public static final java.text.SimpleDateFormat SDF_SIMPLE_DATE_TEXT = new java.text.SimpleDateFormat("dd MMM yyyy");
-	public static final java.text.SimpleDateFormat SDF_SIMPLE_DATE_TIME = new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm");
 	public static CrystalDateSeconds now(){
-		return new CrystalDateSeconds(System.currentTimeMillis());
+		return new CrystalDateSeconds();
 	}
 	public static CrystalDateSeconds today(){
-		GregorianCalendar gc = new GregorianCalendar();
-		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
-		gc.set(GregorianCalendar.MINUTE, 0);
-		gc.set(GregorianCalendar.MILLISECOND, 0);
-		return new CrystalDateSeconds(gc.getTimeInMillis());
+		return new CrystalDateSeconds(CrystalDateUtils.today().getTimeInMillis());
 	}
-	public static CrystalDateSeconds toMonth(){
-		GregorianCalendar gc = new GregorianCalendar();
-		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
-		gc.set(GregorianCalendar.MINUTE, 0);
-		gc.set(GregorianCalendar.MILLISECOND, 0);
-		gc.set(GregorianCalendar.DAY_OF_MONTH, 1);
-		return new CrystalDateSeconds(gc.getTimeInMillis());
+	public static CrystalDateSeconds currentWeek(){
+		return new CrystalDateSeconds(CrystalDateUtils.currentWeek().getTimeInMillis());
 	}
-	public static CrystalDateSeconds toWeek(){
-		GregorianCalendar gc = new GregorianCalendar();
-		gc.set(GregorianCalendar.HOUR_OF_DAY, 0);
-		gc.set(GregorianCalendar.MINUTE, 0);
-		gc.set(GregorianCalendar.MILLISECOND, 0);
-		gc.set(GregorianCalendar.DAY_OF_WEEK, 0);
-		return new CrystalDateSeconds(gc.getTimeInMillis());
+	public static CrystalDateSeconds currentMonth(){
+		return new CrystalDateSeconds(CrystalDateUtils.currentMonth().getTimeInMillis());
 	}
-	public CrystalDateSeconds add(int field, int value){
-		GregorianCalendar gc = new GregorianCalendar();
-		gc.setTime(date);
-		gc.add(field, value);
-		return new CrystalDateSeconds(gc.getTimeInMillis());
-	}
-	public CrystalDateSeconds add(long time){
-		return new CrystalDateSeconds(date.getTime() + time);
+	public static CrystalDateSeconds currentYear(){
+		return new CrystalDateSeconds(CrystalDateUtils.currentYear().getTimeInMillis());
 	}
 }

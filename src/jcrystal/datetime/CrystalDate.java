@@ -1,44 +1,39 @@
-/* Copyright (C) Germán Augusto Sotelo Arévalo - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * Proprietary and confidential
- * Written by Germán Augusto Sotelo Arévalo <gasotelo@crystaltech.co.com>, December 2018
- */
 package jcrystal.datetime;
-import java.util.*;
-import java.text.ParseException;
-public class CrystalDate{
-	public static final java.text.SimpleDateFormat SDF = new java.text.SimpleDateFormat("yyyyMMddHHmm");
-	static {SDF.setTimeZone(TimeZone.getTimeZone("UTC"));}
-	private final java.util.Date date;
-	public CrystalDate(String text)throws ParseException{
-		date = SDF.parse(text);
+public class CrystalDate extends AbsCrystalDate<CrystalDate>{
+	public CrystalDate(String text)throws java.text.ParseException{
+		super(DateType.DATE.FORMAT.parse(text));
 	}
 	public CrystalDate(long time){
-		date = new java.util.Date(time);
+		super(new java.util.Date(time));
+	}
+	@Override public CrystalDate create(long time){
+		return new CrystalDate(time);
 	}
 	public CrystalDate(){
-		date = new Date();
+		super(new java.util.Date());
 	}
-	public String format(){
-		return SDF.format(date);
+	@Override public String format(){
+		return DateType.DATE.FORMAT.format(date);
 	}
-	public java.util.Date toDate(){
-		return date;
+	@Override public CrystalDate next(){
+		return add(java.util.GregorianCalendar.DAY_OF_YEAR, 1);
 	}
-	public static java.util.Date toDate(CrystalDate cDate){
-		return cDate == null ? null : cDate.date;
+	@Override public CrystalDate prev(){
+		return add(java.util.GregorianCalendar.DAY_OF_YEAR, -1);
 	}
-	public static final java.text.SimpleDateFormat SDF_SIMPLE_TIME = new java.text.SimpleDateFormat("HH:mm");
-	public static final java.text.SimpleDateFormat SDF_SIMPLE_DATE = new java.text.SimpleDateFormat("dd/MM/yyyy");
-	public static final java.text.SimpleDateFormat SDF_SIMPLE_DATE_TEXT = new java.text.SimpleDateFormat("dd MMM yyyy");
-	public static final java.text.SimpleDateFormat SDF_SIMPLE_DATE_TIME = new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm");
-	public CrystalDate add(int field, int value){
-		GregorianCalendar gc = new GregorianCalendar();
-		gc.setTime(date);
-		gc.add(field, value);
-		return new CrystalDate(gc.getTimeInMillis());
+	public static CrystalDate now(){
+		return new CrystalDate();
 	}
-	public CrystalDate add(long time){
-		return new CrystalDate(date.getTime() + time);
+	public static CrystalDate today(){
+		return new CrystalDate(CrystalDateUtils.today().getTimeInMillis());
+	}
+	public static CrystalDate currentWeek(){
+		return new CrystalDate(CrystalDateUtils.currentWeek().getTimeInMillis());
+	}
+	public static CrystalDate currentMonth(){
+		return new CrystalDate(CrystalDateUtils.currentMonth().getTimeInMillis());
+	}
+	public static CrystalDate currentYear(){
+		return new CrystalDate(CrystalDateUtils.currentYear().getTimeInMillis());
 	}
 }
