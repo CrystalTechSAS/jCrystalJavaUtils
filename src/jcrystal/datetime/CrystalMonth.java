@@ -24,6 +24,9 @@ public class CrystalMonth extends AbsCrystalDate<CrystalMonth>{
 	@Override public CrystalMonth prev(){
 		return add(java.util.GregorianCalendar.MONTH, -1);
 	}
+	public static CrystalMonth now(){
+		return new CrystalMonth();
+	}
 	public static CrystalMonth currentMonth(){
 		return new CrystalMonth(CrystalDateUtils.currentMonth().getTimeInMillis());
 	}

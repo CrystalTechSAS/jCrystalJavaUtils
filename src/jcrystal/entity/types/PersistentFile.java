@@ -8,7 +8,6 @@ public class PersistentFile implements Serializable{
 
 	private String[] allowedMimeTypes;
 	private String[] allowedExtentions;
-	private long maxLenght;
 	
 	private PersistentFile() {
 		// TODO Auto-generated constructor stub
@@ -24,18 +23,11 @@ public class PersistentFile implements Serializable{
 		this.allowedExtentions = exts;
 		return this;
 	}
-	public PersistentFile maxLenght(int maxLenght) {
-		this.maxLenght = maxLenght;
-		return this;
-	}
 	
 	public String[] getAllowedExtentions() {
 		return allowedExtentions;
 	}
 	public String[] getAllowedMimeTypes() {
 		return allowedMimeTypes;
-	}
-	public long getMaxLenght() {
-		return maxLenght;
 	}
 }

@@ -11,7 +11,7 @@ public enum DateType {
 	DATE_TIME("yyyyMMddHHmm", "dd/MM/yyyy HH:mm"),
 	TIME("HHmm", "HH:mm"),
 	DATE("yyyyMMddHHmm","dd/MM/yyyy"),
-	MONTH("yyyyMM","MM/yyyy"),
+	MONTH("yyyyMMHHmm","MM/yyyy"),
 	YEAR("yyyy","yyyy"),
 	DATE_SECONDS("yyyyMMddHHmmss", "dd/MM/yyyy HH:mm"),
 	TIME_SECONDS("HHmmss", "HH:mm:ss"),
