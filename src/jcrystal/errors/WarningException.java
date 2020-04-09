@@ -17,5 +17,11 @@ public class WarningException extends InternalException{
 	public WarningException(int code, String mensaje) {
 		super(code%100 + 100, mensaje);
 	}
+	public WarningException(int code, Exception ex) {
+		super(code, ex);
+	}
+	public WarningException(int code, String mensaje, Exception ex) {
+		super(code, mensaje, ex);
+	}
 	
 }

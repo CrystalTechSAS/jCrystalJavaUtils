@@ -17,5 +17,11 @@ public class InfoException extends InternalException{
 	public InfoException(int code, String mensaje) {
 		super(code%100, mensaje);
 	}
+	public InfoException(int code, Exception ex) {
+		super(code, ex);
+	}
+	public InfoException(int code, String mensaje, Exception ex) {
+		super(code, mensaje, ex);
+	}
 	
 }

@@ -15,4 +15,12 @@ public class InternalException extends RuntimeException{
 		super(mensaje);
 		this.code = code;
 	}
+	public InternalException(int code, Exception ex) {
+		super(ex);
+		this.code = code;
+	}
+	public InternalException(int code, String mensaje, Exception ex) {
+		super(mensaje, ex);
+		this.code = code;
+	}
 }

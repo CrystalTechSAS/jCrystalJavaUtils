@@ -17,5 +17,11 @@ public class ErrorException extends InternalException{
 	public ErrorException(int code, String mensaje) {
 		super(code%100 + 200, mensaje);
 	}
+	public ErrorException(int code, Exception ex) {
+		super(code, ex);
+	}
+	public ErrorException(int code, String mensaje, Exception ex) {
+		super(code, mensaje, ex);
+	}
 	
 }
