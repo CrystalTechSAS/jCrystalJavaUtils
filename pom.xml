@@ -55,7 +55,7 @@
 	<dependency>
 	    <groupId>com.github.CrystalTechSAS</groupId>
 	    <artifactId>jCrystalDates</artifactId>
-	    <version>1.1.0</version>
+	    <version>46207de108213cf8bc67a1113610e411c2761470</version>
 	</dependency>
   </dependencies>
   <repositories>
